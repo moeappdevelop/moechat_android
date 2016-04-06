@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/moepink"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_login"
+
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingLeft="75dp"
+        android:paddingRight="75dp"
+        android:text="匿名"
+        android:textColor="@color/white"
+        android:textSize="@dimen/moe_textsize" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/button_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_login"
+
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingLeft="75dp"
+        android:paddingRight="75dp"
+        android:text="注册"
+        android:textColor="@color/white"
+        android:textSize="@dimen/moe_textsize" />
+
+    <Button
+        android:id="@+id/button_nowlogin"
+        android:layout_width="200dp"
+        android:layout_height="40sp"
+        android:layout_above="@+id/button_register"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/button_login"
+
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingLeft="75dp"
+        android:paddingRight="75dp"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="@dimen/moe_textsize" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/ic_launcher"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="与你相伴一生"
+        android:id="@+id/textView_alwayswithyou"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/moe_textsize"
+        android:layout_marginTop="20dp" />
+</RelativeLayout>
