@@ -5,8 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import xyz.moechat.android.R;
+import xyz.moechat.android.dbcenter.DatalocationDB;
 import xyz.moechat.android.main.login.fragment_login;
+import xyz.moechat.android.utils.MLog;
 import xyz.moechat.android.utils.Util_Activity;
 
 /**
@@ -26,6 +31,17 @@ public class Activity_login extends FragmentActivity {
             fragment = bundle.getString("fragment", "login");
         }
         replaceFragment(fragment);
+        Test();
+    }
+    void Test(){
+        JSONObject jsonObject=DatalocationDB.getDataLocation("<1983&3&1⊙30.100°,109.125°>");
+        jsonObject.toString();
+        try {
+            MLog.v("moe", jsonObject.getInt("1") + "");
+            MLog.v("moe","count:"+ DatalocationDB.getDataCount());
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
     }
     private void replaceFragment(String fragment) {
         switch (fragment) {

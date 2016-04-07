@@ -6,7 +6,11 @@ import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.widget.LinearLayout;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import xyz.moechat.android.R;
+import xyz.moechat.android.dbcenter.DatalocationDB;
 import xyz.moechat.android.utils.Util_SharedPreferences;
 
 /**
@@ -26,8 +30,18 @@ public class Activity_splash extends FragmentActivity {
         findView();
 
         Util_SharedPreferences.getUserId();
-
+        Test();
         handler.sendEmptyMessageDelayed(0, 1500);
+
+    }
+    void Test(){
+        JSONObject jsonObject=new JSONObject();
+        try {
+            jsonObject.put("1", 1);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        DatalocationDB.Test_insertData("<1983&3&1⊙30.100°,109.125°>",jsonObject);
     }
     void findView(){
         linearLayout_blank=(LinearLayout)findViewById(R.id.linearlayout_blank);
