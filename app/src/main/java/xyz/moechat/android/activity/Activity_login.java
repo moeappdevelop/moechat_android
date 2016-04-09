@@ -33,6 +33,9 @@ public class Activity_login extends FragmentActivity {
         replaceFragment(fragment);
         Test();
     }
+    //控件
+
+
     void Test(){
         JSONObject jsonObject=DatalocationDB.getDataLocation("<1983&3&1⊙30.100°,109.125°>");
         jsonObject.toString();

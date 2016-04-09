@@ -1,5 +1,6 @@
 package xyz.moechat.android.main.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.Button;
 
 
 import xyz.moechat.android.R;
+import xyz.moechat.android.activity.Activity_main;
 import xyz.moechat.android.base.basefragment;
 
 /**
@@ -34,8 +36,6 @@ public class fragment_login extends basefragment implements View.OnClickListener
         button_login=(Button)view.findViewById(R.id.button_login);
         button_temp=(Button)view.findViewById(R.id.button_nowlogin);
         button_register=(Button)view.findViewById(R.id.button_register);
-
-
     }
     void setOnClickListener(){
         button_login.setOnClickListener(this);
@@ -50,6 +50,12 @@ public class fragment_login extends basefragment implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.button_nowlogin:
+                Intent intent=new Intent();
+                intent.setClass(fragment.getActivity(), Activity_main.class);
+                startActivity(intent);
+                break;
+        }
     }
 }

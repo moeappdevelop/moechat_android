@@ -4,29 +4,29 @@
     android:layout_height="match_parent"
     android:background="@color/moepink"
     android:orientation="vertical">
-
     <Button
         android:id="@+id/button_login"
         android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
+        android:layout_height="40sp"
+        android:layout_above="@+id/button_register"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/button_login"
 
         android:drawablePadding="8dp"
         android:gravity="center"
         android:paddingLeft="75dp"
         android:paddingRight="75dp"
-        android:text="匿名"
+        android:text="登录"
         android:textColor="@color/white"
         android:textSize="@dimen/moe_textsize" />
+
 
     <Button
         android:id="@+id/button_register"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/button_login"
+        android:layout_above="@+id/button_nowlogin"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:background="@drawable/button_login"
@@ -42,17 +42,17 @@
     <Button
         android:id="@+id/button_nowlogin"
         android:layout_width="200dp"
-        android:layout_height="40sp"
-        android:layout_above="@+id/button_register"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/button_login"
 
         android:drawablePadding="8dp"
         android:gravity="center"
         android:paddingLeft="75dp"
         android:paddingRight="75dp"
-        android:text="登录"
+        android:text="匿名"
         android:textColor="@color/white"
         android:textSize="@dimen/moe_textsize" />
 
