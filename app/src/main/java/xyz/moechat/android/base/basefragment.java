@@ -36,13 +36,14 @@ public abstract class basefragment extends Fragment {
 
     protected abstract int getLayoutId();
 
-    public void gotofragment(basefragment fragment){
-            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-            transaction.setCustomAnimations(R.anim.in_from_right,
-                    R.anim.out_to_left, R.anim.in_from_left, R.anim.out_to_right);
-            transaction.addToBackStack(null);
-            transaction.replace(R.id.linearlayout_blank,fragment);
-            transaction.commit();
+    public void gotofragment(basefragment fragment,boolean NeedSaveView){
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(R.anim.in_from_right,R.anim.out_to_left, R.anim.in_from_left, R.anim.out_to_right);
+        transaction.addToBackStack(null);
+        transaction.replace(R.id.linearlayout_blank,fragment);
+
+        fragment.needSaveView=NeedSaveView;
+        transaction.commit();
     }
 }
 

@@ -1,10 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity_main">
+    android:orientation="vertical">
 
-    <TextView android:text="Hello World!" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linearlayout_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:transcriptMode="alwaysScroll"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grayline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_main_chat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_main_chat"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/moepink"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/textView_main_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="萌聊"
+                    android:textColor="@color/text_98"
+                    android:textSize="@dimen/moe_textsize"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/linearlayout_main_favorities"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_main_favorities"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/moepink"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/textView_main_favorities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="收藏夹"
+                    android:textColor="@color/text_98"
+                    android:textSize="@dimen/moe_textsize"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_main_discover"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_main_discover"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/moepink"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/textView_main_discover"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="发现"
+                    android:textColor="@color/text_98"
+                    android:textSize="@dimen/moe_textsize"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_main_my"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton_main_my"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/moepink"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/textView_main_my"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="我"
+                    android:textColor="@color/text_98"
+                    android:textSize="@dimen/moe_textsize"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

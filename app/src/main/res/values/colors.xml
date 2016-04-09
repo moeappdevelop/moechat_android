@@ -4,4 +4,8 @@
 
     <color name="moepink">#FF99CC</color>
     <color name="lightpink">#b4ffcbe5</color>
+
+    <color name="grayline"> #b2b2b2 </color>
+<!--字体-->
+    <color name="text_98">#989898</color>
 </resources>
