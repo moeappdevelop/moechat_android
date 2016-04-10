@@ -1,4 +1,8 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="moe_textsize">13sp</dimen>
+
+    <!--模块布局尺寸-->
+    <dimen name="nav_height">55dp</dimen>
+    <dimen name="nav_padding">3dp</dimen>
 </resources>
