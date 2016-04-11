@@ -13,5 +13,8 @@
         android:orientation="vertical"
         android:transcriptMode="alwaysScroll"></LinearLayout>
 
-    <include layout="@layout/linearlayout_main_nav"/>
+   <xyz.moechat.android.main.view.nav
+       android:id="@+id/nav_main"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/nav_height"></xyz.moechat.android.main.view.nav>
 </LinearLayout>

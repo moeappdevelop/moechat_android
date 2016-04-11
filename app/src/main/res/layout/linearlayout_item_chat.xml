@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_chatlist_tiem">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/padding_list_leftandright">
+
+        <RelativeLayout
+            android:layout_width="@dimen/width_layout_avatar"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="@dimen/margintop_layout_avatar">
+
+            <ImageView
+                android:id="@+id/imageView_item_chat_avatar"
+                android:src="@drawable/avatar_placeholder"
+
+                android:layout_width="@dimen/width_image_avatar"
+                android:layout_height="@dimen/width_image_avatar" />
+
+            <TextView
+                android:id="@+id/textView_item_chat_unreadmsgcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/unread_background"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView_linearlayout_item_chat"
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
+</LinearLayout>
