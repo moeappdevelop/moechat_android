@@ -1,6 +1,5 @@
 package xyz.moechat.android.main.login.chat;
 
-import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +46,7 @@ public class adapter_chat extends BaseAdapter{
         ViewHolder holder = null;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = LayoutInflater.from(fromFragment.getActivity()).inflate(R.layout.linearlayout_item_chat, parent, false);
+            convertView = LayoutInflater.from(fromFragment.getActivity()).inflate(R.layout.item_linearlayout_chat, parent, false);
             findviewById(holder,convertView);
             convertView.setTag(holder);
         }else {
@@ -59,7 +58,7 @@ public class adapter_chat extends BaseAdapter{
         return convertView;
     }
     private void findviewById(ViewHolder holder,View view){
-        holder.textView_linearlayout_item_chat=(TextView)view.findViewById(R.id.textView_linearlayout_item_chat);
+        holder.textView_linearlayout_item_chat=(TextView)view.findViewById(R.id.textView_item_chat_content);
     }
     private static class ViewHolder {
         private TextView textView_linearlayout_item_chat;

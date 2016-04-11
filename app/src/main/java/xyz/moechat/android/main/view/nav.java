@@ -8,8 +8,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import xyz.moechat.android.R;
 
 /**
@@ -18,7 +16,7 @@ import xyz.moechat.android.R;
 public class nav extends LinearLayout {
     public nav(Context context, AttributeSet attrs) {
         super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.linearlayout_main_nav, this);
+        LayoutInflater.from(context).inflate(R.layout.nav_linearlayout, this);
         findViewById();
     }
     private void findViewById(){
