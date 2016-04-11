@@ -13,7 +13,7 @@ import xyz.moechat.android.main.login.chat.fragment_chat;
 import xyz.moechat.android.main.view.nav;
 import xyz.moechat.android.utils.Util_Activity;
 
-public class Activity_main extends FragmentActivity {
+public class Activity_main extends FragmentActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class Activity_main extends FragmentActivity {
         setContentView(R.layout.activity_main);
         Util_Activity.Activity_main=this;
         findViewById(null);
-
+        setOnClickListener();
         //初始化fragments
         fragments = new basefragment[] { fragment_chat.newInstance()};
         android.support.v4.app.FragmentTransaction fragmentTransaction =getSupportFragmentManager().beginTransaction();
@@ -41,6 +41,7 @@ public class Activity_main extends FragmentActivity {
         linearLayout_main=(LinearLayout)findViewById(R.id.linearlayout_main);
         //底部导航
         nav=(xyz.moechat.android.main.view.nav)findViewById(R.id.nav_main);
+
     }
     //顶部
 
@@ -48,5 +49,28 @@ public class Activity_main extends FragmentActivity {
     LinearLayout linearLayout_main;
     //底部导航栏
     nav nav;
+    private void setOnClickListener(){
+        nav.getRelativeLayout_nav_chat().setOnClickListener(this);
+        nav.getRelativeLayout_nav_favorities().setOnClickListener(this);
+        nav.getRelativeLayout_nav_discover().setOnClickListener(this);
+        nav.getRelativeLayout_nav_me().setOnClickListener(this);
+    }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.nav_relativeLayout_chat:
+                nav.setSelected(0);
+                break;
+            case R.id.nav_relativeLayout_favorities:
+                nav.setSelected(1);
+                break;
+            case R.id.nav_relativeLayout_discover:
+                nav.setSelected(2);
+                break;
+            case R.id.nav_relativeLayout_me:
+                nav.setSelected(3);
+                break;
+        }
+    }
 }
