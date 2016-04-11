@@ -5,6 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import xyz.moechat.android.R;
 import xyz.moechat.android.base.basefragment;
@@ -22,11 +26,27 @@ public class fragment_chat extends basefragment implements View.OnClickListener 
         super.onCreateView(inflater,container,savedInstanceState);
         findViewById(saveView);
         setOnClickListener();
+        Test();
+        m_adapter_chat=new adapter_chat(fragment,list_string);
+        listView_chat.setAdapter(m_adapter_chat);
         return saveView;
     }
     void findViewById(View view){
+        listView_chat=(ListView)view.findViewById(R.id.listView_chat);
     }
+    //内容
+    private ListView listView_chat;
+    private adapter_chat m_adapter_chat;
+    List<String> list_string;
     void setOnClickListener(){
+
+    }
+    //Test
+    private void Test(){
+        list_string=new ArrayList<>();
+        list_string.add("李鹏");
+        list_string.add("test");
+        list_string.add("nodata");
     }
     @Override
     protected int getLayoutId() {
