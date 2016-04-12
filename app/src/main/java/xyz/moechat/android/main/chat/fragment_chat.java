@@ -1,10 +1,9 @@
-package xyz.moechat.android.main.login.chat;
+package xyz.moechat.android.main.chat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -27,7 +26,7 @@ public class fragment_chat extends basefragment implements View.OnClickListener 
         findViewById(saveView);
         setOnClickListener();
         Test();
-        m_adapter_chat=new adapter_chat(fragment,list_string);
+        m_adapter_chat=new adapter_chat(fragment,list);
         listView_chat.setAdapter(m_adapter_chat);
         return saveView;
     }
@@ -37,16 +36,27 @@ public class fragment_chat extends basefragment implements View.OnClickListener 
     //内容
     private ListView listView_chat;
     private adapter_chat m_adapter_chat;
-    List<String> list_string;
+    List<Mson_chatlistitem> list;
     void setOnClickListener(){
 
     }
     //Test
     private void Test(){
-        list_string=new ArrayList<>();
-        list_string.add("李鹏");
-        list_string.add("test");
-        list_string.add("nodata");
+        list=new ArrayList<>();
+        for(int i=0;i<100;i++) {
+            Mson_chatlistitem mson_chatlistitem=new Mson_chatlistitem();
+
+            mson_chatlistitem.mson_receivemessages=new ArrayList<>();
+            Mson_receivemessage mson_receivemessage=new Mson_receivemessage();
+            mson_receivemessage.fromid="12f"+i;
+            mson_receivemessage.toid="<2"+i+"3>sdf";
+            mson_receivemessage.readornot=false;
+            mson_receivemessage.content="你好,我说李鹏";
+            mson_receivemessage.reveivetime="2016/2/3 12+9:23:32";
+            mson_chatlistitem.mson_receivemessages.add(mson_receivemessage);
+
+            list.add(mson_chatlistitem);
+        }
     }
     @Override
     protected int getLayoutId() {

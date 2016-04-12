@@ -31,7 +31,7 @@ public class Activity_splash extends FragmentActivity {
 
         Util_SharedPreferences.getUserId();
         Test();
-        handler.sendEmptyMessageDelayed(0, 1500);
+        handler.sendEmptyMessageDelayed(0,0);
 
     }
     void Test(){
@@ -54,12 +54,8 @@ public class Activity_splash extends FragmentActivity {
     };
     void Activity_goto(){
         Intent intent = new Intent();
-        intent.setClass(this, Activity_login.class);
+        intent.setClass(this, Activity_main.class);
 
-        Bundle bundle = new Bundle();
-        bundle.putString("fragment","login");
-
-        intent.putExtras(bundle);
         startActivity(intent);
     }
 }

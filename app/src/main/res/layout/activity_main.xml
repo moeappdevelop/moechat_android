@@ -3,6 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <xyz.moechat.android.main.view.spaceid
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </xyz.moechat.android.main.view.spaceid>
 
     <LinearLayout
         android:id="@+id/linearlayout_main"

@@ -1,4 +1,4 @@
-package xyz.moechat.android.main.login.chat;
+package xyz.moechat.android.main.chat;
 
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,11 +16,11 @@ import xyz.moechat.android.R;
  */
 public class adapter_chat extends BaseAdapter{
     private Fragment fromFragment;
-    private List<String> list;
+    private List<Mson_chatlistitem> list;
 
-    public adapter_chat(Fragment fromFragment, List<String> list_string) {
+    public adapter_chat(Fragment fromFragment, List<Mson_chatlistitem> list) {
         this.fromFragment = fromFragment;
-        this.list = list_string;
+        this.list = list;
     }
 
     @Override
@@ -53,14 +53,19 @@ public class adapter_chat extends BaseAdapter{
             holder=(ViewHolder)convertView.getTag();
         }
         //设置内容
-        holder.textView_linearlayout_item_chat.setText(list.get(position));
-
+        holder.textView_linearlayout_item_chat.setText(list.get(position).lastunreadmessagecontent());
+        holder.textView_item_chat_fromid.setText(list.get(position).fromid());
+        holder.textView_item_chat_unreadmessagecount.setText(list.get(position).unreadmessagecount()+"");
+        holder.textView_item_chat_lastreceivetime.setText(list.get(position).lastunreadmessagetime());
         return convertView;
     }
     private void findviewById(ViewHolder holder,View view){
         holder.textView_linearlayout_item_chat=(TextView)view.findViewById(R.id.textView_item_chat_content);
+        holder.textView_item_chat_fromid=(TextView)view.findViewById(R.id.textView_item_chat_fromid);
+        holder.textView_item_chat_unreadmessagecount=(TextView)view.findViewById(R.id.textView_item_chat_unreadmsgcount);
+        holder.textView_item_chat_lastreceivetime=(TextView)view.findViewById(R.id.textView_item_chat_lastreceivetime);
     }
     private static class ViewHolder {
-        private TextView textView_linearlayout_item_chat;
+        private TextView textView_linearlayout_item_chat,textView_item_chat_fromid,textView_item_chat_unreadmessagecount,textView_item_chat_lastreceivetime;
     }
 }
