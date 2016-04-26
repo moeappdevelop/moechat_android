@@ -3,17 +3,18 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
 
-    <color name="graywhite">#ededed</color>
+    <color name="graywhite">#fafafa</color>
 
-    <color name="selector_chatlist">#e0e0e0</color>
+    <color name="selector_chatlist">#f3f3f7</color>
 
     <color name="moepink">#FF99CC</color>
     <color name="lightpink">#ffd9ec</color>
-    <color name="unread">#e70000</color>
-    <color name="line_gray">#b2b2b2</color>
-    <color name="line_ee">#eeeeee</color>
-<!--字体-->
-    <color name="text_98">#989898</color>
+    <color name="unread">#ff3e3e</color>
+    <color name="line_gray">#d7d7d7</color>
 
-    <color name="black_moe">#111111</color>
+    <color name="line_da">#dadada</color>
+<!--字体-->
+    <color name="text_8b">#8b8b8b</color>
+
+    <color name="black_moe">#393a3f</color>
 </resources>
