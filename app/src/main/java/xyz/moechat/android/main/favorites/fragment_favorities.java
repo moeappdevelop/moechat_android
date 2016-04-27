@@ -14,6 +14,7 @@ import xyz.moechat.android.base.basefragment;
 import xyz.moechat.android.main.chat.Mson_chatlistitem;
 import xyz.moechat.android.main.chat.Mson_receivemessage;
 import xyz.moechat.android.main.chat.adapter_chat;
+import xyz.moechat.android.view.MoeGridView;
 
 /**
  * Created by timeloveboy on 16/4/10.
@@ -36,7 +37,8 @@ public class fragment_favorities extends basefragment implements View.OnClickLis
     void findViewById(View view){
         listView_favorities=(ListView)view.findViewById(R.id.listView_favorities);
     }
-    //内容
+    //region 内容
+    private MoeGridView gridView_favorities_type;
     private ListView listView_favorities;
     private adapter_chat m_adapter_chat;
     List<Mson_chatlistitem> list;
@@ -45,6 +47,9 @@ public class fragment_favorities extends basefragment implements View.OnClickLis
     }
     //Test
     private void Test(){
+
+
+
         list=new ArrayList<>();
         for(int i=0;i<5;i++) {
             Mson_chatlistitem mson_chatlistitem=new Mson_chatlistitem();
