@@ -1,78 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-
-
     android:layout_width="match_parent"
-    android:layout_height="@dimen/height_chatlist_tiem">
+    android:layout_height="@dimen/height_chatlist_tiem"
+    android:background="@drawable/item_linearlayout_chat"
+    android:paddingLeft="@dimen/padding_list_leftandright">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/width_layout_avatar"
-        android:background="@drawable/item_linearlayout_chat"
-        android:paddingLeft="@dimen/padding_list_leftandright">
+    <RelativeLayout
+        android:layout_width="53dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3.5dp"
+        android:layout_marginBottom="3.5dp">
 
-        <RelativeLayout
-            android:layout_width="@dimen/width_layout_avatar"
-            android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imageView_item_chat_avatar"
+            android:src="@drawable/avatar_placeholder"
 
-            <ImageView
-                android:id="@+id/imageView_item_chat_avatar"
-                android:src="@drawable/avatar_placeholder"
 
-                android:layout_margin="@dimen/margin_image_avatar"
-                android:layout_width="@dimen/width_image_avatar"
-                android:layout_height="@dimen/width_image_avatar" />
+            android:layout_width="@dimen/size_image_avatar"
+            android:layout_height="@dimen/size_image_avatar"
+            android:layout_centerVertical="true" />
 
-            <TextView
-                android:id="@+id/textView_item_chat_unreadmsgcount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/shape_unread_background"
-                android:gravity="center"
-                android:textColor="@android:color/white"
-                android:textSize="12sp" />
-            
-        </RelativeLayout>
-        <RelativeLayout
+        <TextView
+            android:id="@+id/textView_item_chat_unreadmsgcount"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_unread_background"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_alignParentLeft="false" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_image_avatar"
+        android:layout_weight="1.0">
+        <TextView
+            android:id="@+id/textView_item_chat_fromid"
+
+            android:textColor="@color/black"
+            android:textSize="@dimen/moe_chat_fromid"
+
+            android:layout_alignParentTop="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/margin_image_avatar"
-            android:layout_weight="1.0">
-            <TextView
-                android:id="@+id/textView_item_chat_fromid"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/textView_item_chat_content"
 
-                android:textColor="@color/black"
-                android:textSize="@dimen/moe_chat_fromid"
+            android:textColor="@color/text_8b"
+            android:textSize="@dimen/moe_textsize"
 
-                android:layout_alignParentTop="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/textView_item_chat_content"
+            android:layout_below="@id/textView_item_chat_fromid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-                android:textColor="@color/text_98"
-                android:textSize="@dimen/moe_textsize"
+        <TextView
+            android:id="@+id/textView_item_chat_lastreceivetime"
 
-                android:layout_below="@id/textView_item_chat_fromid"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            android:textColor="@color/text_8b"
+            android:textSize="@dimen/moe_textsize"
 
-            <TextView
-                android:id="@+id/textView_item_chat_lastreceivetime"
-
-                android:textColor="@color/text_98"
-                android:textSize="@dimen/moe_textsize"
-
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/line_ee" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 </LinearLayout>

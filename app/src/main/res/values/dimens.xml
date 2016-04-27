@@ -2,17 +2,18 @@
     <dimen name="moe_textsize">13sp</dimen>
     <dimen name="moe_chat_fromid">15sp</dimen>
     <!--模块布局尺寸-->
-    <dimen name="nav_height">55dp</dimen>
+    <dimen name="nav_height">54dp</dimen>
+    <dimen name="nav_unread_roundsize">19dp</dimen>
     <dimen name="padding_nav">3dp</dimen>
 
-    <dimen name="padding_list_leftandright">13dp</dimen>
+    <dimen name="padding_list_leftandright">14dp</dimen>
 
-    <dimen name="width_layout_avatar">59dp</dimen>
+
     <dimen name="margin_image_avatar">4dp</dimen>
 
-    <dimen name="width_image_avatar">50dp</dimen>
-    <dimen name="height_image_avatar">50dp</dimen>
+    <dimen name="size_image_avatar">48dp</dimen>
 
-    <dimen name="height_chatlist_tiem">60dp</dimen>
+    <dimen name="height_chatlist_tiem">63.5dp</dimen>
     <dimen name="dp_1">1dp</dimen>
+    <dimen name="px_1">0.5dp</dimen>
 </resources>

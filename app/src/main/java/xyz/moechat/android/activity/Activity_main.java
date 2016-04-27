@@ -21,22 +21,26 @@ public class Activity_main extends FragmentActivity implements View.OnClickListe
         Util_Activity.Activity_main=this;
         findViewById(null);
         setOnClickListener();
-        //初始化fragments
+        //region 初始化fragments
         fragments = new basefragment[] { fragment_chat.newInstance(), fragment_favorities.newInstance()};
-
-        //
-        nav.setSelected(fragments_index);
+        select_fragment(0);
+        nav.setSelected(0);
+        //endregion
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        select_fragment(fragments_index);
-    }
 
+
+    //region fragment
     private basefragment[] fragments;
-    private int fragments_index=1;
+    private Integer fragments_index;
     public void select_fragment(int goto_fragments_index){
+        if(fragments_index==null){
+            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragments_index=0;
+            fragmentTransaction.add(R.id.linearlayout_main, fragments[goto_fragments_index]);
+            fragmentTransaction.show(fragments[goto_fragments_index]);
+            fragmentTransaction.commit();
+        }
         if(goto_fragments_index!=fragments_index) {
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
 
@@ -63,12 +67,12 @@ public class Activity_main extends FragmentActivity implements View.OnClickListe
             fragments_index=goto_fragments_index;
         }
     }
+    //endregion
     public void findViewById(View view){
         //中间
         linearLayout_main=(LinearLayout)findViewById(R.id.linearlayout_main);
         //底部导航
         nav=(xyz.moechat.android.main.view.nav)findViewById(R.id.nav_main);
-
     }
     //顶部
 

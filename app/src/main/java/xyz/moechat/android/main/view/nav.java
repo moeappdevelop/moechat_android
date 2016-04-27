@@ -62,7 +62,7 @@ public class nav extends LinearLayout {
                 textViews[i].setTextColor(getResources().getColor(R.color.moepink));
             }else {
                 imageViews[i].setSelected(false);
-                textViews[i].setTextColor(getResources().getColor(R.color.text_98));
+                textViews[i].setTextColor(getResources().getColor(R.color.text_8b));
             }
         }
     }
