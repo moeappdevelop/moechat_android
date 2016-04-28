@@ -43,6 +43,13 @@ public class fragment_chat extends basefragment implements View.OnClickListener 
                 gotoActivity_next_fragment();
             }
         });
+        listView_chat.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                return false;
+            }
+        });
         //endregion
         return saveView;
     }
