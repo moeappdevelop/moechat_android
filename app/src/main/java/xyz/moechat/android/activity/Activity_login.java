@@ -21,31 +21,20 @@ public class Activity_login extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_blank);
-
         Util_Activity.Activity_login=this;
-
         Bundle bundle = this.getIntent().getExtras();
         String fragment = "";
         if (bundle != null) {
             fragment = bundle.getString("fragment", "login");
         }
         replaceFragment(fragment);
-        Test();
+
     }
     //控件
 
-
-    void Test(){
-        JSONObject jsonObject=DatalocationDB.getDataLocation("<1983&3&1⊙30.100°,109.125°>");
-        jsonObject.toString();
-        try {
-            MLog.v("moe", jsonObject.getInt("1") + "");
-            MLog.v("moe","count:"+ DatalocationDB.getDataCount());
-        }catch (JSONException e){
-            e.printStackTrace();
-        }
-    }
     private void replaceFragment(String fragment) {
         switch (fragment) {
             case "login":// 登录

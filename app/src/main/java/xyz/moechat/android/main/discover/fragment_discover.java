@@ -14,7 +14,7 @@ public class fragment_discover extends basefragment{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_favorities;
+        return R.layout.fragment_discover;
     }
 
 }
