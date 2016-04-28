@@ -33,8 +33,9 @@ public class login_state {
 
     Integer getLogin(){
         JSONObject jsonObject=DatalocationDB.getDataLocation("<1983&3&1⊙30.100°,109.125°>");
-        jsonObject.toString();
         try {
+            if(jsonObject==null)
+                return null;
             return jsonObject.getInt("1");
 
         }catch (JSONException e){

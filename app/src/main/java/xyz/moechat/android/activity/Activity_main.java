@@ -32,6 +32,7 @@ public class Activity_main extends FragmentActivity implements View.OnClickListe
         nav.setSelected(0);
         //endregion
     }
+
     void checkloginin(){
         login_state login_state=new login_state();
         if(!login_state.islogin()){

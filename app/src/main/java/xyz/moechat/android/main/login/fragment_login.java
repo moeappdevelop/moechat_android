@@ -46,7 +46,10 @@ public class fragment_login extends basefragment implements View.OnClickListener
     protected int getLayoutId() {
         return R.layout.fragment_login;
     }
-
+    @Override
+    public String fragment_name(){
+        return "fragment_login";
+    }
 
     @Override
     public void onClick(View v) {

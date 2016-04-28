@@ -23,7 +23,10 @@ public class fragment_favorities extends basefragment implements View.OnClickLis
     public static fragment_favorities newInstance(){
         return fragment;
     }
-
+    @Override
+    public String fragment_name(){
+        return "fragment_favorities";
+    }
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater,container,savedInstanceState);
         findViewById(saveView);

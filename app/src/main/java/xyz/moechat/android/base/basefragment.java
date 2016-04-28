@@ -18,6 +18,7 @@ import xyz.moechat.android.R;
  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  */
 public abstract class basefragment extends Fragment {
+    public  abstract  String fragment_name();
     protected View saveView;
     public boolean needSaveView = false;
     @Nullable
@@ -39,8 +40,8 @@ public abstract class basefragment extends Fragment {
     public void gotofragment(basefragment fragment,boolean NeedSaveView){
         FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
         transaction.setCustomAnimations(R.anim.in_from_right,R.anim.out_to_left, R.anim.in_from_left, R.anim.out_to_right);
-        transaction.addToBackStack(null);
-        transaction.replace(R.id.linearlayout_blank,fragment);
+        transaction.add(fragment, fragment.fragment_name());
+        transaction.replace(R.id.linearlayout_blank, fragment);
 
         fragment.needSaveView=NeedSaveView;
         transaction.commit();

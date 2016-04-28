@@ -1,15 +1,19 @@
 package xyz.moechat.android.main.chat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import xyz.moechat.android.R;
+import xyz.moechat.android.activity.Activity_main;
+import xyz.moechat.android.activity.Activity_next;
 import xyz.moechat.android.base.basefragment;
 
 /**
@@ -20,15 +24,32 @@ public class fragment_chat extends basefragment implements View.OnClickListener 
     public static fragment_chat newInstance(){
         return fragment;
     }
-
+    @Override
+    public String fragment_name(){
+        return "fragment_chat";
+    }
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater,container,savedInstanceState);
         findViewById(saveView);
         setOnClickListener();
+
+        //region chatlist
         Test();
         m_adapter_chat=new adapter_chat(fragment,list);
         listView_chat.setAdapter(m_adapter_chat);
+        listView_chat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                gotoActivity_next_fragment();
+            }
+        });
+        //endregion
         return saveView;
+    }
+    public void gotoActivity_next_fragment(){
+        Intent intent=new Intent();
+        intent.setClass(getActivity(), Activity_next.class);
+        startActivity(intent);
     }
     void findViewById(View view){
         listView_chat=(ListView)view.findViewById(R.id.listView_chat);

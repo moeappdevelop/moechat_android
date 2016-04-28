@@ -35,6 +35,12 @@
                 <action android:name=".activity.Activity_login" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.Activity_next">
+            <intent-filter>
+                <action android:name=".activity.Activity_next" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
