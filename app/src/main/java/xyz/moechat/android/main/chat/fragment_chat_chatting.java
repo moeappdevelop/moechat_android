@@ -5,15 +5,14 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 
 import xyz.moechat.android.R;
-import xyz.moechat.android.base.basefragment;
+import xyz.moechat.android.base.Basefragment;
 
 /**
  * Created by timeloveboy on 16/4/29.
  */
-public class fragment_chat_chatting extends basefragment{
+public class fragment_chat_chatting extends Basefragment {
     public static fragment_chat_chatting fragment=new fragment_chat_chatting();
     public static fragment_chat_chatting newInstance(){
         return fragment;

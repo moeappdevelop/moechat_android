@@ -8,12 +8,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.Window;
 
 import xyz.moechat.android.R;
+import xyz.moechat.android.base.BaseActivity;
 import xyz.moechat.android.main.chat.fragment_chat_chatting;
 import xyz.moechat.android.main.login.fragment_login;
 import xyz.moechat.android.utils.Util_Activity;
 
 
-public class Activity_next extends FragmentActivity {
+public class Activity_next extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

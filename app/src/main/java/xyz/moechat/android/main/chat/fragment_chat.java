@@ -12,14 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import xyz.moechat.android.R;
-import xyz.moechat.android.activity.Activity_main;
 import xyz.moechat.android.activity.Activity_next;
-import xyz.moechat.android.base.basefragment;
+import xyz.moechat.android.base.Basefragment;
 
 /**
  * Created by timeloveboy on 16/4/10.
  */
-public class fragment_chat extends basefragment implements View.OnClickListener {
+public class fragment_chat extends Basefragment implements View.OnClickListener {
     public static fragment_chat fragment=new fragment_chat();
     public static fragment_chat newInstance(){
         return fragment;

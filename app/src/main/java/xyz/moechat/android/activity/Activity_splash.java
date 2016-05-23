@@ -10,13 +10,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import xyz.moechat.android.R;
+import xyz.moechat.android.base.BaseActivity;
 import xyz.moechat.android.dbcenter.DatalocationDB;
 import xyz.moechat.android.utils.Util_SharedPreferences;
 
 /**
  * Created by timeloveboy on 16/4/6.
  */
-public class Activity_splash extends FragmentActivity {
+public class Activity_splash extends BaseActivity {
 
     /*
     界面
@@ -30,7 +31,7 @@ public class Activity_splash extends FragmentActivity {
         findView();
 
         Util_SharedPreferences.getUserId();
-        handler.sendEmptyMessageDelayed(0,0);
+        handler.sendEmptyMessageDelayed(0, 0);
 
     }
 

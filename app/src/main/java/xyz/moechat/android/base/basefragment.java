@@ -18,12 +18,11 @@ import xyz.moechat.android.utils.MLog;
  来源：知乎
  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  */
-public abstract class basefragment extends Fragment {
-    public  abstract  String fragment_name();
+public abstract class Basefragment extends Fragment {
     protected View saveView;
     public boolean needSaveView = false;
 
-    public basefragment() {
+    public Basefragment() {
         super();
         MLog.v(null,getClass().getName()+":new " +getClass().getSimpleName());
     }

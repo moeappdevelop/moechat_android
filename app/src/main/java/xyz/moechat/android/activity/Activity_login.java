@@ -9,6 +9,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import xyz.moechat.android.R;
+import xyz.moechat.android.base.BaseActivity;
 import xyz.moechat.android.dbcenter.DatalocationDB;
 import xyz.moechat.android.main.login.fragment_login;
 import xyz.moechat.android.utils.MLog;
@@ -17,7 +18,7 @@ import xyz.moechat.android.utils.Util_Activity;
 /**
  * Created by timeloveboy on 16/4/6.
  */
-public class Activity_login extends FragmentActivity {
+public class Activity_login extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

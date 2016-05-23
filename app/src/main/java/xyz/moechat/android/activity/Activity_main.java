@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import xyz.moechat.android.R;
-import xyz.moechat.android.base.basefragment;
+import xyz.moechat.android.base.BaseActivity;
+import xyz.moechat.android.base.Basefragment;
 import xyz.moechat.android.main.chat.fragment_chat;
 import xyz.moechat.android.main.discover.fragment_discover;
 import xyz.moechat.android.main.favorites.fragment_favorities;
@@ -17,7 +18,7 @@ import xyz.moechat.android.main.my.fragment_my;
 import xyz.moechat.android.main.view.nav;
 import xyz.moechat.android.utils.Util_Activity;
 
-public class Activity_main extends FragmentActivity implements View.OnClickListener{
+public class Activity_main extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,7 @@ public class Activity_main extends FragmentActivity implements View.OnClickListe
         findViewById(null);
         setOnClickListener();
         //region 初始化fragments
-        fragments = new basefragment[] { fragment_chat.newInstance(), fragment_favorities.newInstance(), fragment_discover.newInstance(), fragment_my.newInstance()};
+        fragments = new Basefragment[] { fragment_chat.newInstance(), fragment_favorities.newInstance(), fragment_discover.newInstance(), fragment_my.newInstance()};
         select_fragment(0);
         nav.setSelected(0);
         //endregion
@@ -42,7 +43,7 @@ public class Activity_main extends FragmentActivity implements View.OnClickListe
         }
     }
     //region fragment
-    private basefragment[] fragments;
+    private Basefragment[] fragments;
     private Integer fragments_index;
     public void select_fragment(int goto_fragments_index){
         if(fragments_index==null){

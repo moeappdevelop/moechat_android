@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import xyz.moechat.android.R;
-import xyz.moechat.android.base.basefragment;
+import xyz.moechat.android.base.Basefragment;
 import xyz.moechat.android.main.chat.Mson_chatlistitem;
 import xyz.moechat.android.main.chat.Mson_receivemessage;
 import xyz.moechat.android.main.chat.adapter_chat;
@@ -19,7 +19,7 @@ import xyz.moechat.android.view.MoeGridView;
 /**
  * Created by timeloveboy on 16/4/10.
  */
-public class fragment_favorities extends basefragment implements View.OnClickListener {
+public class fragment_favorities extends Basefragment implements View.OnClickListener {
     public static fragment_favorities fragment=new fragment_favorities();
     public static fragment_favorities newInstance(){
         return fragment;

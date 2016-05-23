@@ -11,12 +11,12 @@ import android.widget.Button;
 
 import xyz.moechat.android.R;
 import xyz.moechat.android.activity.Activity_main;
-import xyz.moechat.android.base.basefragment;
+import xyz.moechat.android.base.Basefragment;
 
 /**
  * Created by timeloveboy on 16/4/6.
  */
-public class fragment_login extends basefragment implements View.OnClickListener {
+public class fragment_login extends Basefragment implements View.OnClickListener {
     private Button button_login,button_temp,button_register;
 
     public static fragment_login fragment=new fragment_login();
