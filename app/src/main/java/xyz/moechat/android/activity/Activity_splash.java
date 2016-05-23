@@ -30,19 +30,10 @@ public class Activity_splash extends FragmentActivity {
         findView();
 
         Util_SharedPreferences.getUserId();
-        Test();
         handler.sendEmptyMessageDelayed(0,0);
 
     }
-    void Test(){
-        JSONObject jsonObject=new JSONObject();
-        try {
-            jsonObject.put("1", 1);
-        }catch (JSONException e){
-            e.printStackTrace();
-        }
-        DatalocationDB.Test_insertData("<1983&3&1⊙30.100°,109.125°>",jsonObject);
-    }
+
     void findView(){
         linearLayout_blank=(LinearLayout)findViewById(R.id.linearlayout_blank);
     }

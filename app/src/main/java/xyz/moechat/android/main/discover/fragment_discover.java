@@ -11,10 +11,13 @@ public class fragment_discover extends basefragment{
     public static fragment_discover newInstance(){
         return fragment;
     }
-
+    @Override
+    public String fragment_name(){
+        return "fragment_discover";
+    }
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_favorities;
+        return R.layout.fragment_discover;
     }
 
 }

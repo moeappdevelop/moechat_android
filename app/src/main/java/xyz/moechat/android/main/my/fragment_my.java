@@ -11,6 +11,10 @@ public class fragment_my extends basefragment {
     public static fragment_my newInstance(){
         return fragment;
     }
+    @Override
+    public String fragment_name(){
+        return "fragment_my";
+    }
 
     @Override
     protected int getLayoutId() {

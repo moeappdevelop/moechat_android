@@ -21,34 +21,22 @@ public class Activity_login extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_blank);
-
         Util_Activity.Activity_login=this;
-
         Bundle bundle = this.getIntent().getExtras();
-        String fragment = "";
-        if (bundle != null) {
-            fragment = bundle.getString("fragment", "login");
-        }
-        replaceFragment(fragment);
-        Test();
+        String togo_fragment = "";
+        if(bundle==null){
+            togo_fragment="fragment_login";
+        }else {
+        togo_fragment= bundle.getString("fragment", "fragment_login");}
+        replaceFragment(togo_fragment);
     }
     //控件
 
-
-    void Test(){
-        JSONObject jsonObject=DatalocationDB.getDataLocation("<1983&3&1⊙30.100°,109.125°>");
-        jsonObject.toString();
-        try {
-            MLog.v("moe", jsonObject.getInt("1") + "");
-            MLog.v("moe","count:"+ DatalocationDB.getDataCount());
-        }catch (JSONException e){
-            e.printStackTrace();
-        }
-    }
     private void replaceFragment(String fragment) {
         switch (fragment) {
-            case "login":// 登录
+            case "fragment_login":// 登录
                 replaceFragment(fragment_login.newInstance());
                 break;
 

@@ -1,6 +1,7 @@
 package xyz.moechat.android.activity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -9,7 +10,10 @@ import android.widget.LinearLayout;
 import xyz.moechat.android.R;
 import xyz.moechat.android.base.basefragment;
 import xyz.moechat.android.main.chat.fragment_chat;
+import xyz.moechat.android.main.discover.fragment_discover;
 import xyz.moechat.android.main.favorites.fragment_favorities;
+import xyz.moechat.android.main.login.login_state;
+import xyz.moechat.android.main.my.fragment_my;
 import xyz.moechat.android.main.view.nav;
 import xyz.moechat.android.utils.Util_Activity;
 
@@ -17,19 +21,26 @@ public class Activity_main extends FragmentActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        checkloginin();
         setContentView(R.layout.activity_main);
         Util_Activity.Activity_main=this;
         findViewById(null);
         setOnClickListener();
         //region 初始化fragments
-        fragments = new basefragment[] { fragment_chat.newInstance(), fragment_favorities.newInstance()};
+        fragments = new basefragment[] { fragment_chat.newInstance(), fragment_favorities.newInstance(), fragment_discover.newInstance(), fragment_my.newInstance()};
         select_fragment(0);
         nav.setSelected(0);
         //endregion
     }
 
-
-
+    void checkloginin(){
+        login_state login_state=new login_state();
+        if(!login_state.islogin()){
+            Intent intent=new Intent();
+            intent.setClass(this, Activity_login.class);
+            startActivity(intent);
+        }
+    }
     //region fragment
     private basefragment[] fragments;
     private Integer fragments_index;
@@ -100,9 +111,11 @@ public class Activity_main extends FragmentActivity implements View.OnClickListe
                 break;
             case R.id.nav_relativeLayout_discover:
                 nav.setSelected(2);
+                select_fragment(2);
                 break;
             case R.id.nav_relativeLayout_me:
                 nav.setSelected(3);
+                select_fragment(3);
                 break;
         }
     }
