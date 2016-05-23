@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import xyz.moechat.android.R;
+import xyz.moechat.android.utils.MLog;
 
 /**
  * Created by timeloveboy on 16/4/6.
@@ -20,10 +21,75 @@ import xyz.moechat.android.R;
 public abstract class basefragment extends Fragment {
     protected View saveView;
     public boolean needSaveView = false;
-    @Nullable
+
+    public basefragment() {
+        super();
+        MLog.v(null,getClass().getName()+":new " +getClass().getSimpleName());
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        MLog.v(null, getClass().getName() + ":onCreate(" +savedInstanceState.toString()+")");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        MLog.v(null, getClass().getName() + ":onStart()" );
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MLog.v(null, getClass().getName() + ":onResume()");
+    }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+        MLog.v(null, getClass().getName() + ":onViewStateRestored(" + savedInstanceState.toString() + ")");
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        MLog.v(null, getClass().getName() + ":onViewCreated(" + savedInstanceState.toString() + ")");
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        MLog.v(null, getClass().getName() + ":onSaveInstanceState(" + outState.toString() + ")");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        MLog.v(null, getClass().getName() + ":onStop()" );
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MLog.v(null, getClass().getName() + ":onPause()");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        MLog.v(null, getClass().getName() + ":onDestroyView()");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        MLog.v(null, getClass().getName() + ":onDestroy()");
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        MLog.v(null, getClass().getName() + ":onCreateView()");
         if (needSaveView && saveView != null) {
             return saveView;
         }
@@ -36,14 +102,5 @@ public abstract class basefragment extends Fragment {
 
     protected abstract int getLayoutId();
 
-    public void gotofragment(basefragment fragment,boolean NeedSaveView){
-        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-        transaction.setCustomAnimations(R.anim.in_from_right,R.anim.out_to_left, R.anim.in_from_left, R.anim.out_to_right);
-        transaction.addToBackStack(null);
-        transaction.replace(R.id.linearlayout_blank,fragment);
-
-        fragment.needSaveView=NeedSaveView;
-        transaction.commit();
-    }
 }
 
