@@ -23,10 +23,8 @@ public class fragment_chat extends Basefragment implements View.OnClickListener 
     public static fragment_chat newInstance(){
         return fragment;
     }
-    @Override
-    public String fragment_name(){
-        return "fragment_chat";
-    }
+
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater,container,savedInstanceState);
         findViewById(saveView);

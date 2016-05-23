@@ -17,10 +17,7 @@ public class fragment_chat_chatting extends Basefragment {
     public static fragment_chat_chatting newInstance(){
         return fragment;
     }
-    @Override
-    public String fragment_name(){
-        return "fragment_chat_chatting";
-    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_chat_chatting;
