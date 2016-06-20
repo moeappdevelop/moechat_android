@@ -38,7 +38,7 @@ public class fragment_favorities extends Basefragment implements View.OnClickLis
         listView_favorities=(ListView)view.findViewById(R.id.listView_favorities);
     }
     //region 内容
-    private MoeGridView gridView_favorities_type;
+
     private ListView listView_favorities;
     private adapter_chat m_adapter_chat;
     List<Mson_chatlistitem> list;
