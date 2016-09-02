@@ -30,7 +30,8 @@ public abstract class Basefragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MLog.v(null, getClass().getName() + ":onCreate(" +savedInstanceState.toString()+")");
+
+        MLog.v(null, getClass().getName() + ":onCreate("+")");
     }
 
     @Override
@@ -48,18 +49,21 @@ public abstract class Basefragment extends Fragment {
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
+        if(savedInstanceState!=null)
         MLog.v(null, getClass().getName() + ":onViewStateRestored(" + savedInstanceState.toString() + ")");
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(savedInstanceState!=null)
         MLog.v(null, getClass().getName() + ":onViewCreated(" + savedInstanceState.toString() + ")");
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        if(outState!=null)
         MLog.v(null, getClass().getName() + ":onSaveInstanceState(" + outState.toString() + ")");
     }
 

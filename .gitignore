@@ -8,3 +8,5 @@
 /libs/build
 *.iml
 
+app/libs/
+mirror/libs/

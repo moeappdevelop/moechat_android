@@ -8,7 +8,8 @@
 
     <Button
         android:layout_width="40dp"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:background="@drawable/self" />
 
     <EditText
         android:background="@drawable/shape_edittext"

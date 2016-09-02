@@ -4,6 +4,7 @@ import xyz.moechat.android.R;
 import xyz.moechat.android.base.Basefragment;
 
 /**
+ *
  * Created by timeloveboy on 16/4/13.
  */
 public class fragment_my extends Basefragment {
