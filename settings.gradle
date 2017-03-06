@@ -1,1 +1,1 @@
-include ':app', ':mirror'
+include ':app'
