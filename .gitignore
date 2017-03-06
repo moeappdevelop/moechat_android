@@ -7,6 +7,6 @@
 /app/build
 /libs/build
 *.iml
-
+/.idea
 app/libs/
 mirror/libs/
